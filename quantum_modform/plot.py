@@ -4,7 +4,7 @@ from .utils import rats
 
 
 def plot_func(func, N=100, real_or_imag="both", exclude=[]):
-    rs = rats(N, exclude)
+    rs = rats(N, exclude=exclude)
     if real_or_imag in ["both", "real"]:
         pts_S_real = [(x, float(func(x).real())) for x in rs]
         scp_S_real = scatter_plot(pts_S_real, markersize = 10, facecolor="blue")

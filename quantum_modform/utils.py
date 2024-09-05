@@ -7,4 +7,4 @@ def poch(a, q, n):
 
 def rats(N, exclude=[]):
     # list of rationals of denominator <= N, in [-1, 1]
-    return [m/N for m in range(-N, N + 1) if m not in exclude]
+    return [m/N for m in range(-N, N + 1) if m/N not in exclude]
